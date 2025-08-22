@@ -34,12 +34,10 @@ export const useAccountsStore = defineStore('accounts', () => {
     }
   }
 
-  // Сохранение в localStorage
   const saveToLocalStorage = () => {
     localStorage.setItem('accounts', JSON.stringify(accounts.value))
   }
 
-  // Загрузка из localStorage
   const loadFromLocalStorage = () => {
     const saved = localStorage.getItem('accounts')
     if (saved) {

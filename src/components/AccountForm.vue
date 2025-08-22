@@ -16,7 +16,7 @@
     <div v-for="account in accounts" :key="account.id" class="card mb-3">
       <div class="card-body">
         <div class="row">
-          <!-- Метка -->
+
           <div class="col-md-3 mb-3">
             <label class="form-label">Метка</label>
             <input
@@ -33,7 +33,6 @@
             </div>
           </div>
 
-          <!-- Тип записи -->
           <div class="col-md-2 mb-3">
             <label class="form-label">Тип записи</label>
             <select
@@ -50,7 +49,6 @@
             </div>
           </div>
 
-          <!-- Логин -->
           <div class="col-md-3 mb-3">
             <label class="form-label">Логин *</label>
             <input
@@ -67,7 +65,6 @@
             </div>
           </div>
 
-          <!-- Пароль (только для локальных) -->
           <div v-if="account.type === 'Локальная'" class="col-md-3 mb-3">
             <label class="form-label">Пароль *</label>
             <input
@@ -84,7 +81,6 @@
             </div>
           </div>
 
-          <!-- Кнопка удаления -->
           <div class="col-md-1 mb-3 d-flex align-items-end">
             <button
               class="btn btn-danger"
@@ -145,7 +141,7 @@ const validateAccount = (account: Account) => {
     errors.value[account.id] = accountErrors
   } else {
     delete errors.value[account.id]
-    // Преобразование метки в массив объектов
+
     const labels = account.label.split(';')
       .filter(label => label.trim())
       .map(label => ({ text: label.trim() }))
