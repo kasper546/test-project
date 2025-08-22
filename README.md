@@ -31,3 +31,12 @@ npm run dev
 ```sh
 npm run build
 ```
+## История коммитов
+
+* e624dec (HEAD -> master) Project ready for GitHub deployment  
+* 415a8aa feat: Add localStorage for accounts
+* bda0f6b feat: Implement account form component with validation
+* 3de1a6e feat: Create accounts store with TypeScript interface 
+* 4ce3661 build: Add Bootstrap for UI components
+* 03625af build: Install base dependencies
+* 635362f feat: Initial commit - Create Vue 3 project with TypeScript
